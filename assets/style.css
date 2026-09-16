@@ -1,0 +1,365 @@
+:root{
+  --paper:#f6f5f0;
+  --white:#fffefa;
+  --ink:#172126;
+  --ink2:#36464c;
+  --muted:#667278;
+  --line:#d8ddda;
+  --accent:#146c75;
+  --accent2:#8b5e3c;
+  --soft:#e8f0ee;
+  --shadow:0 18px 55px rgba(25,35,39,.09);
+  --radius:24px;
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:.18em}
+img{display:block;max-width:100%}
+.container{width:min(calc(100% - 42px),var(--max));margin-inline:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:12px;background:#fff;padding:9px 12px;z-index:999;border-radius:10px}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(246,245,240,.94);backdrop-filter:blur(15px);border-bottom:1px solid rgba(216,221,218,.8)}
+.nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:28px}.brand{text-decoration:none;font-weight:760;letter-spacing:-.02em;display:flex;align-items:center;gap:11px}.monogram{width:38px;height:38px;border:1px solid #7e898e;border-radius:50%;display:grid;place-items:center;font:700 .78rem Georgia,serif}.nav-links{display:flex;align-items:center;gap:24px}.nav-links a{text-decoration:none;color:#425057;font-size:.92rem}.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--accent)}.menu-btn{display:none;border:0;background:transparent;font:inherit;font-weight:700;padding:8px;cursor:pointer}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(3.5rem,7vw,6.8rem);margin:.08em 0 .18em}h2{font-size:clamp(2.25rem,4vw,3.8rem);margin:0 0 .42em}h3{font-size:1.45rem;margin:.15em 0 .42em}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:850;color:var(--accent);margin:0 0 14px}.lead{font-size:clamp(1.11rem,1.65vw,1.4rem);color:#405057;max-width:780px}.small{font-size:.9rem;color:var(--muted)}
+.hero{padding:74px 0 82px}.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:74px;align-items:center}.hero-copy .lead{max-width:720px}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px;color:var(--muted);font-size:.95rem}.meta span+span:before{content:"·";margin-right:10px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}.button{display:inline-flex;align-items:center;text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:10px 15px;font-size:.91rem;transition:.18s ease}.button.primary{background:var(--ink);color:white}.button:hover{transform:translateY(-2px);box-shadow:0 8px 23px rgba(20,31,36,.10)}
+/* Deliberately show the whole portrait: no zoom/crop. */
+.portrait-card{background:#e5e8e6;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:var(--shadow);max-width:430px;margin-left:auto}.portrait-card img{width:100%;height:auto;object-fit:contain}.portrait-caption{padding:12px 16px;background:var(--white);color:var(--muted);font-size:.84rem;border-top:1px solid var(--line)}
+.section{padding:82px 0}.section.white{background:var(--white)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:37px}.section-head>p{max-width:620px;color:var(--muted);margin:0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.theme-summary{border:1px solid var(--line);background:var(--white);border-radius:var(--radius);padding:28px 30px}.theme-summary p{color:var(--muted)}.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:.79rem;color:#526168;background:rgba(255,255,255,.7)}
+.background-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:start}.timeline{border-left:1px solid var(--line);margin:7px 0 0 8px}.timeline-item{position:relative;padding:0 0 34px 30px}.timeline-item:before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}.timeline-item h3{margin:0 0 3px;font-size:1.3rem}.timeline-item p{margin:.12em 0;color:var(--muted)}.facts{display:grid;gap:14px}.fact{border-top:1px solid var(--line);padding-top:16px}.fact:first-child{border-top:0;padding-top:0}.fact strong{font-family:Georgia,serif;font-size:1.15rem;font-weight:500}.fact p{margin:.25em 0;color:var(--muted)}
+.callout{border-left:3px solid var(--accent2);padding:0 0 0 20px;max-width:930px}.callout p{font-family:Georgia,serif;font-size:clamp(1.45rem,2.6vw,2.35rem);line-height:1.3;margin:0}
+.footer{padding:45px 0;border-top:1px solid var(--line);color:var(--muted)}.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:28px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer a{color:inherit}
+.page-hero{padding:78px 0 42px}.page-hero h1{font-size:clamp(3.1rem,6vw,5.8rem)}.research-nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.research-nav a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.58);font-size:.85rem}.research-nav a:hover{color:var(--accent);border-color:#aab6b3}
+.research-theme{padding:68px 0;border-top:1px solid var(--line)}.research-theme:first-child{border-top:0;padding-top:15px}.theme-heading{display:grid;grid-template-columns:1fr .95fr;gap:60px;align-items:start;margin-bottom:34px}.theme-heading.reverse>div:first-child{order:2}.theme-heading.reverse>figure{order:1}.theme-copy p{color:#4e5b61}.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:30px 0 36px}.topic{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:21px;padding:23px}.topic p{color:var(--muted);margin:.4em 0 0}
+/* All scientific figures are shown in full. Never crop research images. */
+.figure-box{margin:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:white;box-shadow:0 14px 42px rgba(20,31,36,.06)}.figure-box img{width:100%;height:auto;object-fit:contain;background:white}.figure-box figcaption{border-top:1px solid var(--line);padding:11px 15px;color:var(--muted);font-size:.83rem}.figure-box.dark{background:#2d2d2d}.figure-box.dark img{background:#2d2d2d}.figure-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin:28px 0}.wide-figure{margin:32px 0}.wide-figure img{max-height:none}
+.publications{padding-top:74px;border-top:1px solid var(--line)}.pub-list{border-top:1px solid var(--line)}.pub{display:grid;grid-template-columns:78px 1fr;gap:23px;padding:25px 0;border-bottom:1px solid var(--line)}.pub-year{font-weight:820;color:var(--accent)}.pub-title{font-family:Georgia,serif;font-size:1.27rem;line-height:1.25;margin-bottom:5px}.pub-authors,.pub-venue{color:var(--muted);font-size:.93rem}.pub-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.pub-links a{text-decoration:none;color:var(--accent);font-weight:740;font-size:.84rem}.pub-links a:hover{text-decoration:underline}@media(max-width:900px){.hero-grid,.background-grid,.theme-heading{grid-template-columns:1fr;gap:40px}.portrait-card{margin:0;max-width:520px}.intro-grid,.topic-grid,.figure-grid{grid-template-columns:1fr}.theme-heading.reverse>div:first-child,.theme-heading.reverse>figure{order:unset}.section-head{flex-direction:column;align-items:flex-start}.hero{padding-top:56px}}
+@media(max-width:700px){.container{width:min(calc(100% - 28px),var(--max))}.nav{min-height:67px}.menu-btn{display:block}.nav-links{display:none;position:absolute;left:14px;right:14px;top:70px;background:var(--white);border:1px solid var(--line);border-radius:17px;padding:8px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:10px 11px}.brand span:last-child{display:none}h1{font-size:clamp(3rem,15vw,4.7rem)}.section{padding:62px 0}.hero{padding-bottom:62px}.pub{grid-template-columns:1fr;gap:3px}.footer-grid{flex-direction:column;align-items:flex-start}.portrait-caption{display:none}}
+
+.timeline-wide{max-width:900px}
+.publications-home{padding-top:2px}
+
+/* v9: expanded research map */
+.interest-list{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px 0 42px}
+.interest-block{padding:25px 26px 24px;border-top:1px solid var(--line);background:rgba(255,255,255,.36)}
+.interest-title{display:inline;margin:0;font-size:1.55rem;text-decoration-line:underline;text-decoration-thickness:1px;text-decoration-color:rgba(20,108,117,.55);text-underline-offset:.22em}
+.interest-block p{color:var(--ink2);margin:.9em 0 0}
+.related-papers{font-size:.9rem;color:var(--muted)!important;border-left:2px solid rgba(20,108,117,.35);padding-left:12px}
+.related-papers a{color:var(--accent);text-decoration-thickness:1px;text-decoration-color:rgba(20,108,117,.38)}
+.related-papers a:hover{text-decoration-color:var(--accent)}
+@media(max-width:900px){.interest-list{grid-template-columns:1fr}.interest-block{padding-inline:0;background:transparent}}
+.pub-title-link{text-decoration:none}.pub-title-link:hover{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px}
+
+
+/* v10: research figures reused as quiet visual texture on the home page.
+   The images are never cropped; they are scaled proportionally and kept subtle
+   so the text and portrait remain the focus. */
+.hero-with-art{position:relative;overflow:hidden;isolation:isolate}
+.hero-with-art>.container{position:relative;z-index:2}
+.hero-art{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero-art img{position:absolute;width:min(48vw,720px);height:auto;object-fit:contain;opacity:.075;filter:saturate(.55) contrast(.9)}
+.hero-art-circuits img{right:-1.5%;top:4%;transform:rotate(-2deg)}
+
+.publications-section{position:relative;overflow:hidden;isolation:isolate}
+.publications-section>.container{position:relative;z-index:2}
+.publication-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
+.publication-art{position:absolute;height:auto;object-fit:contain;opacity:.055;filter:saturate(.5) contrast(.9)}
+.publication-art-codes{width:min(44vw,650px);right:-8%;top:5.5rem;transform:rotate(1.5deg)}
+.publication-art-capacity{width:min(38vw,560px);left:-9%;bottom:4.5rem;transform:rotate(-2deg)}
+.publications-home{position:relative}
+.publications-home .pub-list{background:rgba(246,245,240,.72);backdrop-filter:blur(1.5px)}
+
+@media(max-width:900px){
+  .hero-art img{width:min(76vw,620px);opacity:.055;right:-18%;top:7%}
+  .publication-art{opacity:.038}
+  .publication-art-codes{width:76vw;right:-28%;top:7rem}
+  .publication-art-capacity{width:70vw;left:-30%;bottom:7rem}
+}
+@media(max-width:700px){
+  .hero-art img{width:88vw;right:-34%;top:4%;opacity:.045}
+  .publication-art{display:none}
+  .publications-home .pub-list{background:transparent;backdrop-filter:none}
+}
+
+
+/* v11: fewer images, more breathing room, no screenshot-style figure captions. */
+.hero-art,.publication-backdrop{display:none!important}
+.publications-section-clean{position:relative;overflow:visible}
+.publications-section-clean .pub-list{background:transparent;backdrop-filter:none}
+
+/* Research page: one image per broad direction. Images are deliberately smaller than
+   their containers and always shown in full rather than filling/cropping the box. */
+.research-visual{min-height:330px;display:flex;align-items:center;justify-content:center;padding:28px 34px;background:#fff;box-shadow:none}
+.research-visual img{width:auto!important;max-width:88%!important;max-height:390px!important;height:auto!important;object-fit:contain!important;margin:auto}
+.research-visual.dark{background:#2d2d2d}
+.research-visual.dark img{max-width:92%!important;max-height:430px!important}
+.figure-box figcaption{display:none!important}
+
+/* Home-page changing billboard. It uses figures not repeated on the research page. */
+.snapshot-section{padding:74px 0 76px;background:#eef0ec;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.snapshot-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+.snapshot-head h2{margin-bottom:0;max-width:760px}
+.snapshot-controls{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.snapshot-arrow{width:40px;height:40px;border-radius:50%;border:1px solid #b9c0bd;background:rgba(255,255,255,.78);font:inherit;font-size:1.05rem;cursor:pointer;color:var(--ink)}
+.snapshot-arrow:hover{background:#fff;border-color:#89948f}
+.snapshot-dots{display:flex;gap:7px;align-items:center}
+.snapshot-dot{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#aeb7b3;cursor:pointer}
+.snapshot-dot.is-active{background:var(--accent);transform:scale(1.25)}
+.snapshot-billboard{position:relative;height:clamp(310px,39vw,485px);border:1px solid var(--line);border-radius:28px;background:#fff;overflow:hidden;box-shadow:0 12px 36px rgba(25,35,39,.055)}
+.snapshot-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:34px 50px;opacity:0;visibility:hidden;transition:opacity .65s ease,visibility .65s ease}
+.snapshot-slide.is-active{opacity:1;visibility:visible}
+.snapshot-slide img{display:block;width:auto;height:auto;max-width:88%;max-height:88%;object-fit:contain;margin:auto}
+@media(prefers-reduced-motion:reduce){.snapshot-slide{transition:none}}
+@media(max-width:900px){
+  .snapshot-head{align-items:flex-start;flex-direction:column}
+  .research-visual{min-height:260px;padding:22px}
+  .research-visual img{max-width:94%!important;max-height:350px!important}
+  .snapshot-billboard{height:clamp(270px,60vw,420px)}
+  .snapshot-slide{padding:24px}
+  .snapshot-slide img{max-width:94%;max-height:90%}
+}
+@media(max-width:700px){
+  .snapshot-section{padding:58px 0}
+  .snapshot-billboard{height:300px;border-radius:20px}
+  .snapshot-slide{padding:18px}
+  .snapshot-controls{width:100%;justify-content:flex-end}
+}
+
+
+/* v12: all research figures live in the rotating home-page gallery. */
+.snapshot-section{padding:52px 0 64px}
+.snapshot-section .container{max-width:1180px}
+.snapshot-billboard{height:clamp(340px,43vw,560px)}
+.snapshot-slide{padding:42px 64px}
+.snapshot-slide img{max-width:84%;max-height:84%;object-fit:contain}
+.theme-heading.no-visual{grid-template-columns:1fr;max-width:940px;gap:0;margin-bottom:30px}
+.theme-heading.no-visual .theme-copy{max-width:900px}
+@media(max-width:700px){
+  .snapshot-section{padding:38px 0 48px}
+  .snapshot-billboard{height:clamp(280px,72vw,420px)}
+  .snapshot-slide{padding:22px}
+  .snapshot-slide img{max-width:94%;max-height:90%}
+}
+
+/* v13: visible carousel controls beneath the captionless research gallery */
+.snapshot-controls-bottom{justify-content:center;margin-top:18px;width:100%}
+.snapshot-controls-bottom .snapshot-arrow{background:#fff}
+.snapshot-controls-bottom .snapshot-dot{width:9px;height:9px}
+
+/* v14: place the rotating research gallery beside the academic timeline. */
+.background-grid-gallery{grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:58px;align-items:start}
+.background-grid-gallery .timeline{margin-top:5px}
+.timeline-gallery{min-width:0;align-self:start;padding-top:2px}
+.timeline-gallery .snapshot-billboard{height:clamp(330px,34vw,455px);border-radius:24px;background:#fff;box-shadow:0 10px 30px rgba(25,35,39,.05)}
+.timeline-gallery .snapshot-slide{padding:28px 34px}
+.timeline-gallery .snapshot-slide img{max-width:92%;max-height:88%;object-fit:contain}
+.timeline-gallery .snapshot-controls-bottom{margin-top:15px}
+@media(max-width:900px){
+  .background-grid-gallery{grid-template-columns:1fr;gap:34px}
+  .timeline-gallery{max-width:720px;width:100%}
+  .timeline-gallery .snapshot-billboard{height:clamp(300px,60vw,430px)}
+}
+@media(max-width:700px){
+  .timeline-gallery .snapshot-billboard{height:300px;border-radius:20px}
+  .timeline-gallery .snapshot-slide{padding:18px}
+}
+
+
+/* v16: stripped-back home hero, horizontal academic timeline, and research carousel beside publications. */
+.hero-minimal{padding:66px 0 70px}
+.hero-minimal .hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr);gap:68px}
+.hero-minimal .hero-copy{padding-top:4px}
+.hero-minimal .hero-copy .lead:first-child{font-size:1.28rem;line-height:1.65;color:var(--ink);margin-top:0}
+.hero-minimal .hero-copy .lead+ .lead{margin-top:1.1rem}
+
+.timeline-horizontal-wrap{display:block}
+.timeline-horizontal{border-left:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative;padding-top:26px}
+.timeline-horizontal:before{content:"";position:absolute;left:4%;right:4%;top:8px;height:1px;background:var(--line)}
+.timeline-horizontal .timeline-item{padding:22px 26px 6px 0;min-width:0}
+.timeline-horizontal .timeline-item:last-child{padding-right:0}
+.timeline-horizontal .timeline-item:before{left:0;top:-23px;width:11px;height:11px;background:var(--paper);border:2px solid var(--accent)}
+.timeline-horizontal .timeline-item h3{font-size:1.12rem;line-height:1.35;margin-bottom:7px}
+.timeline-horizontal .timeline-item p{font-size:.9rem;line-height:1.5}
+
+.publications-head-simple{margin-bottom:28px}
+.publications-head-simple h2{margin-bottom:0}
+.publications-with-gallery{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.75fr);gap:58px;align-items:start}
+.publication-gallery{position:sticky;top:104px;min-width:0;padding-top:4px}
+.publication-gallery .snapshot-billboard{height:clamp(330px,34vw,470px);border-radius:24px;background:#fff;box-shadow:0 10px 30px rgba(25,35,39,.05)}
+.publication-gallery .snapshot-slide{padding:28px 34px}
+.publication-gallery .snapshot-slide img{max-width:92%;max-height:88%;object-fit:contain}
+.publication-gallery .snapshot-controls-bottom{margin-top:15px}
+
+@media(max-width:980px){
+  .timeline-horizontal{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 30px;padding-top:0}
+  .timeline-horizontal:before{display:none}
+  .timeline-horizontal .timeline-item{padding:20px 20px 4px 22px;border-left:1px solid var(--line)}
+  .timeline-horizontal .timeline-item:before{left:-6px;top:27px}
+  .publications-with-gallery{grid-template-columns:1fr;gap:36px}
+  .publication-gallery{position:static;max-width:760px;width:100%;order:-1}
+  .publication-gallery .snapshot-billboard{height:clamp(300px,58vw,440px)}
+}
+@media(max-width:760px){
+  .hero-minimal .hero-grid{grid-template-columns:1fr;gap:34px}
+  .timeline-horizontal{grid-template-columns:1fr;gap:18px}
+  .timeline-horizontal .timeline-item{padding-right:0}
+  .publication-gallery .snapshot-billboard{height:300px;border-radius:20px}
+  .publication-gallery .snapshot-slide{padding:18px}
+}
+
+/* v18: research figures sit between the academic timeline and publications. */
+.research-strip-section{
+  padding:54px 0 20px;
+  background:var(--white);
+}
+.research-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  align-items:stretch;
+}
+.research-strip-card{
+  min-height:285px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(25,35,39,.045);
+}
+.research-strip-card img{
+  width:auto;
+  height:auto;
+  max-width:96%;
+  max-height:300px;
+  object-fit:contain;
+  margin:auto;
+}
+.publications-section-clean{padding-top:60px}
+.publications-home>.pub-list{max-width:980px}
+
+@media(max-width:980px){
+  .research-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .research-strip-card{min-height:270px}
+}
+@media(max-width:700px){
+  .research-strip-section{padding:38px 0 6px}
+  .research-strip{grid-template-columns:1fr;gap:16px}
+  .research-strip-card{min-height:260px;padding:20px;border-radius:20px}
+  .research-strip-card img{max-height:280px}
+  .publications-section-clean{padding-top:48px}
+}
+
+/* v19: publications and research figures share a two-column layout. */
+.research-strip-section{display:none!important}
+.publications-side-by-side{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,400px);
+  gap:54px;
+  align-items:start;
+}
+.publications-side-by-side .pub-list{min-width:0}
+.publication-image-stack{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  min-width:0;
+}
+.publication-image-card{
+  min-height:310px;
+  display:flex;
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
+  transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(25,35,39,.045);
+}
+
+.publication-image-card:hover,.publication-image-card:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(25,35,39,.09);
+  border-color:#aeb9b5;
+  outline:none;
+}
+.publication-image-card img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:310px;
+  object-fit:contain;
+  margin:auto;
+}
+/* These two source figures had large white margins; the cropped assets give them a
+   modestly closer framing while retaining the full mathematical content. */
+.publication-image-card.zoomed{
+  min-height:270px;
+  padding:10px 12px;
+}
+.publication-image-card.zoomed img{
+  max-width:100%;
+  max-height:290px;
+}
+.publication-image-card.dark{background:#2d2d2d;padding:14px}
+.publication-image-card.dark img{max-height:340px}
+.publications-home>.pub-list{max-width:none}
+
+@media(max-width:980px){
+  .publications-side-by-side{grid-template-columns:1fr;gap:40px}
+  .publication-image-stack{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+  }
+  .publication-image-card,.publication-image-card.zoomed{min-height:270px}
+}
+@media(max-width:700px){
+  .publication-image-stack{grid-template-columns:1fr}
+  .publication-image-card,.publication-image-card.zoomed{min-height:250px;padding:16px}
+  .publication-image-card img,.publication-image-card.zoomed img{max-height:280px}
+}
+
+
+/* v20: subtle hyperlinks throughout the academic timeline. */
+.timeline-link{color:inherit;text-decoration-color:rgba(20,108,117,.34);text-decoration-thickness:1px}
+.timeline-link:hover{color:var(--accent);text-decoration-color:var(--accent)}
+
+
+/* v21: minimal footer contact. */
+.footer-email{justify-self:end;text-align:right}
+.footer-email a{color:inherit;text-decoration:none}
+.footer-email a:hover{color:var(--accent);text-decoration:underline}
+@media(max-width:700px){.footer-email{justify-self:start;text-align:left}}
+
+
+/* v23: use the alternate portrait at a smaller, native-looking size. */
+.hero-minimal .portrait-card{max-width:360px;width:100%;justify-self:end}
+@media(max-width:760px){.hero-minimal .portrait-card{max-width:285px;justify-self:start}}
+
+/* v30: concise research-topic list in the homepage introduction. */
+.research-topic-list{margin:1.15rem 0 0;padding-left:1.45rem;max-width:760px;font-size:1.08rem;line-height:1.7;color:#405057}
+.research-topic-list li{padding-left:.3rem;margin:.18rem 0}
+
+/* v31: keep the homepage research introduction typographically uniform. */
+.hero-minimal .hero-copy .lead,
+.hero-minimal .research-topic-list{
+  font-family:inherit;
+  font-size:1.28rem;
+  line-height:1.65;
+  color:var(--ink);
+}
+.hero-minimal .overarching-theme{margin-top:1.15rem;}
+@media(max-width:700px){
+  .hero-minimal .hero-copy .lead,
+  .hero-minimal .research-topic-list{font-size:1.12rem;}
+}
