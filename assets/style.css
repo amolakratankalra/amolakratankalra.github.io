@@ -11,6 +11,7 @@
   --shadow:0 18px 55px rgba(25,35,39,.09);
   --radius:24px;
   --max:1160px;
+  --page-copy-size:1.1rem;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -354,15 +355,11 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height
 .hero-minimal .hero-copy .lead,
 .hero-minimal .research-topic-list{
   font-family:inherit;
-  font-size:1.28rem;
+  font-size:var(--page-copy-size);
   line-height:1.65;
   color:var(--ink);
 }
 .hero-minimal .overarching-theme{margin-top:1.15rem;}
-@media(max-width:700px){
-  .hero-minimal .hero-copy .lead,
-  .hero-minimal .research-topic-list{font-size:1.12rem;}
-}
 
 /* Simple navigation shared by the home and research pages. */
 .page-links{display:flex;align-items:center;gap:24px;flex-shrink:0}
@@ -370,7 +367,7 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height
 .page-links a:hover{color:var(--accent);text-decoration:underline}
 .page-links a[aria-current="page"]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.4em}
 .page-links a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
-.research-page{min-height:calc(100vh - 190px);font-size:1.1rem;line-height:1.8}
+.research-page{min-height:calc(100vh - 190px);font-size:var(--page-copy-size);line-height:1.8}
 .research-page .page-hero{padding-bottom:34px}
 .research-intro{max-width:900px}
 .research-notes{max-width:900px;padding-bottom:80px}
